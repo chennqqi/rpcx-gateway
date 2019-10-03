@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	gateway "github.com/rpcx-ecosystem/rpcx-gateway"
+	gateway "github.com/chennqqi/rpcx-gateway"
 	"github.com/smallnest/rpcx/client"
 )
 
