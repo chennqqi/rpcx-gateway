@@ -4,7 +4,7 @@ WORKDIR /go/src/github.com/chennqqi/rpcx-gateway/cmd
 #ENV GOPROXY=https://goproxy.cn
 
 # build
-RUN CGO_ENABLED=0 GOOS=linux go build --ldflags "-s -w" -a -installsuffix cgo -o /go/src/app/buildtarget
+RUN CGO_ENABLED=0 GOOS=linux go build -tags "reuseport quic kcp zookeeper etcd consul ping" --ldflags "-s -w" -a -installsuffix cgo -o /go/src/app/buildtarget
 
 #FROM scratch
 FROM alpine
